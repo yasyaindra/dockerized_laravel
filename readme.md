@@ -26,12 +26,14 @@ cp .env.example .env
 
 ```txt
 DB_CONNECTION=mysql
-DB_HOST=nama container di docker
+DB_HOST=dockerized_laravel_mysql_1
 DB_PORT=3306
-DB_DATABASE=
-DB_USERNAME=
-DB_PASSWORD=
+DB_DATABASE=laradock
+DB_USERNAME=laradock
+DB_PASSWORD=secret
 ```
+
+dont forget to make database 'laradock'
 
 # GENERATE KEY
 
