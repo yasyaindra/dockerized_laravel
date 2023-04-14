@@ -1,0 +1,24 @@
+version: "3"
+services:
+  php_laravel:
+    build: ./php
+    image: yasya_php:latest
+    container_name: php
+    hostname: "dockerized_laravel"
+    volumes:
+      - ./src:/var/www/html
+      - ./php/www.conf:/usr/local/etc/php-fpm.d/www.conf
+    working_dir: /var/www/html
+
+  nginx_laravel:
+    build: ./nginx
+    image: yasya_nginx:latest
+    container_name: nginx
+    hostname: "dockerized_nginx"
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/var/www/html
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php_laravel
