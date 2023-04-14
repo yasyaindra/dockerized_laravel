@@ -9,7 +9,7 @@ docker-compose up -d --build
 # EXECUTE CONTAINER
 
 ```zsh
-docker exec -it php_laravel bash
+docker exec -it php bash
 ```
 
 # HOW TO MAKE A PROJECT IN SRC
