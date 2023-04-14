@@ -35,6 +35,12 @@ DB_PASSWORD=secret
 
 dont forget to make database 'laradock'
 
+testing
+
+```zsh
+php artisan migrate
+```
+
 # GENERATE KEY
 
 ```php
